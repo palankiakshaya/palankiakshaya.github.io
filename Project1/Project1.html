@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-image:linear-gradient(grey,pink,blue);
+            height: 100vh;
+
+        }
+        #con {
+            background-image: linear-gradient(pink,lightblue);
+            height: 350px;
+            width: 400px;
+            margin: auto;
+            padding-top: 50px;
+            text-align: center;
+            border: 1px solid black;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        .button {
+            height: 35px;
+            width: 190px;
+            background-color: blue;
+            color: white;
+        }
+        input{
+            height: 35px;
+            width: 190px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img style="margin-left: 400px; height: 500px; width: 500px; margin-top: 80px;" src="insta.webp">
+        <h1 style="text-align: center;">Scroll down to login </h1>
+    </div>
+    <div>
+        <marquee>Fill the required details for login</marquee>
+        <div id="con">
+            <h1>Instagram</h1>
+        <h4>Enter the details</h4>
+        <input type="text" placeholder="create an username" id="s"><br><br>
+        <input type="password" placeholder="create new password" id="p"><br><br>
+        <button class="button" onclick="s1()">Create an account</button><br>
+        <p><i><U>Already have an account?</U></i></p>
+        <button onclick="s2()">Login</button>
+        </div>
+    </div>
+        <script>
+               const s1=()=>{
+                a=s.value
+                b=p.value
+                alert("Account created")
+               }
+               
+               const s2=()=>{
+                con.innerHTML=""
+                str=""
+                str+=`
+                <h1>Login</h1>
+                    <input type="text" placeholder=" Username" id="f"><br><br>
+                    <input type="password" placeholder="Password" id="c"><br><br>
+                    <button onclick="s3()">Login</button>`
+                    con.innerHTML=str ;
+               } 
+               
+               const s3=()=>{
+                   if(f.value==a && c.value==b){
+                    alert("successfully logged in")
+                   }
+                   else{
+                    alert("invalid credentials")
+                   }
+               }
+        </script>
+</body>
+
+</html>
